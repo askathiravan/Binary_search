@@ -1,0 +1,15 @@
+arr=[1,6,8,10,13,17,24,38,44]
+# we need to search for the given target 
+target=17
+lower_bound=0
+upper_bound=len(arr)-1
+while lower_bound<=upper_bound:
+    mid_index=(lower_bound+upper_bound)//2
+    if arr[mid_index]==target:
+        print("Found target , position is : ",mid_index)
+        break
+    else:
+        if arr[mid_index]<target:
+            lower_bound=mid_index+1
+        else:
+            upper_bound=mid_index-1
